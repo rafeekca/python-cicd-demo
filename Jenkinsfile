@@ -10,19 +10,19 @@ pipeline {
 
         stage('Install Python') {
             steps {
-                sh 'python3 --version'
+                bat 'python --version'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'python3 -m unittest test_app.py'
+                bat 'python -m unittest test_app.py'
             }
         }
 
         stage('Deploy') {
             steps {
-                sh 'echo "App tested and ready to deploy!"'
+                bat 'echo App tested and ready to deploy!'
             }
         }
     }
